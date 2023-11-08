@@ -1,0 +1,42 @@
+package ejerciciosVentana.ej12;
+
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+
+public class VentanaInicio extends View{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4682610986012566311L;
+	private JFrame frame;
+
+	/**
+	 * Create the application.
+	 */
+	public VentanaInicio(App appController) {
+		super(appController);
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Bienvenido a mi app");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(108, 63, 190, 40);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Entrar");
+		btnNewButton.setBounds(156, 168, 89, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		
+	
+	}
+	
+		
+
+}

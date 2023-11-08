@@ -1,0 +1,166 @@
+package ejerciciosVentana.ej12;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.KeyStroke;
+import java.awt.event.KeyEvent;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class App {
+	private JFrame frame;
+	private Ventana1 v1;
+	private Ventana2 v2;
+	private Ventana3 v3;
+	private View pantallaActual;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					App window = new App();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public App() {
+		initialize();
+	}
+
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+
+		JLabel lblNewLabel = new JLabel("Bienvenido a mi aplicación");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(97, 26, 230, 115);
+		frame.getContentPane().add(lblNewLabel);
+
+		JButton btnNewButton = new JButton("Entrar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				pantallaActual = v1;
+				irVentana1();
+			}
+		});
+		btnNewButton.setBounds(168, 178, 89, 23);
+		frame.getContentPane().add(btnNewButton);
+		v1 = new Ventana1(this);
+		v2 = new Ventana2(this);
+		v3 = new Ventana3(this);
+
+	}
+
+	public void irVentana1() {
+		getPantallaActual(v1);
+
+	}
+
+	public void irVentana2() {
+		getPantallaActual(v2);
+	}
+
+	public void irVentana3() {
+		getPantallaActual(v3);
+	}
+
+	public void getPantallaActual(View pantalla) {
+		String msj = pantallaActual.getTexto();
+
+		JMenuBar menuBar = new JMenuBar();
+		frame.setJMenuBar(menuBar);
+
+		JMenu mnNavegar = new JMenu("Navegar");
+		mnNavegar.setMnemonic('1');
+		menuBar.add(mnNavegar);
+
+		JMenuItem p1 = new JMenuItem("Ir a Pantalla 1");
+		p1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_1, 0));
+		mnNavegar.add(p1);
+
+		JMenuItem p2 = new JMenuItem("Ir a pantalla 2");
+		p2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_2, 0));
+		mnNavegar.add(p2);
+
+		JMenuItem p3 = new JMenuItem("Ir a pantalla 3");
+		p3.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_3, 0));
+		mnNavegar.add(p3);
+
+		JMenu mnSalir = new JMenu("Salir");
+		mnSalir.setMnemonic('S');
+		menuBar.add(mnSalir);
+
+		JMenuItem salir = new JMenuItem("Salir");
+		salir.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, 0));
+		mnSalir.add(salir);
+		JMenuItem volver=new JMenuItem("Volver al inicio");
+		volver.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_V, 0));
+		mnSalir.add(volver);
+		frame.setContentPane(pantalla);
+		frame.revalidate();
+		pantallaActual = pantalla;
+		pantalla.setTexto(msj);
+		
+
+		ActionListener actionP1 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				irVentana1();
+			}
+		};
+
+		ActionListener actionP2 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				irVentana2();
+			}
+		};
+		ActionListener actionP3 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				irVentana3();
+			}
+		};
+		ActionListener actionSalir = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (JOptionPane.showConfirmDialog(salir, "¿Estás seguro de que quieres salir?", "SALIR",
+						JOptionPane.YES_NO_OPTION) == 0) {
+					System.exit(0);
+				}
+			}
+		};
+		ActionListener actionVolver=new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (JOptionPane.showConfirmDialog(volver, "Estás seguro de que quieres volver a la pantalla inicial?", "VOLVER", JOptionPane.YES_NO_OPTION)==0) {
+					
+				}
+			}
+		};
+		salir.addActionListener(actionSalir);
+		p1.addActionListener(actionP1);
+		p2.addActionListener(actionP2);
+		p3.addActionListener(actionP3);
+
+	}
+}
