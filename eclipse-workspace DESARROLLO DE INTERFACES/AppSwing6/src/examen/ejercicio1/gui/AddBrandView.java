@@ -2,6 +2,11 @@ package examen.ejercicio1.gui;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
+
 import javax.swing.JButton;
 
 public class AddBrandView extends View{
@@ -10,10 +15,6 @@ public class AddBrandView extends View{
 	 * 
 	 */
 	private static final long serialVersionUID = -1649928976592673683L;
-	private static final String SEAT = "Seat";
-	private static final String TOYOTA = "Toyota";
-	private static final String RENAULT = "Renault";
-	
 	private JTextField newBrandTf;
 	private JComboBox<String> brandsCb;
 	private JLabel newBrandLbl; 
@@ -25,7 +26,7 @@ public class AddBrandView extends View{
 		setLayout(null);
 		
 		newBrandLbl = new JLabel("Nueva marca: ");
-		newBrandLbl.setBounds(148, 155, 98, 14);
+		newBrandLbl.setBounds(130, 155, 98, 14);
 		add(newBrandLbl);
 		
 		newBrandTf = new JTextField();
@@ -38,19 +39,35 @@ public class AddBrandView extends View{
 		add(brandLbl);
 		
 		brandsCb = new JComboBox<String>();
-		brandsCb.setBounds(276, 215, 30, 22);
+		brandsCb.setBounds(220, 215, 86, 22);
 		add(brandsCb);
-		brandsCb.addItem(SEAT);
-		brandsCb.addItem(TOYOTA);
-		brandsCb.addItem(RENAULT);
+
+		
 		
 		addBtn = new JButton("Añadir");
 		addBtn.setBounds(471, 151, 89, 23);
 		add(addBtn);
+		brandsCb.setSelectedIndex(-1);
 		
+		ActionListener actionBtn=new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				appController.addBrand(newBrandTf.getText());
+			}
+		};
+		addBtn.addActionListener(actionBtn);
+	}
+	public void rellenarCombo(List<String>marcas) {
+		brandsCb.removeAllItems();
+		for (String string : marcas) {
+			brandsCb.addItem(string);
+		}
 	}
 
 	@Override
 	public void limpiarForm() {
+		newBrandTf.setText("");
+		brandsCb.setSelectedIndex(-1);
 	}
 }

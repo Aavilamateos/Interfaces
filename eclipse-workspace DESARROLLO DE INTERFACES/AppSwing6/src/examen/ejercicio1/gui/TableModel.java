@@ -64,7 +64,14 @@ public class TableModel extends AbstractTableModel{
 			return coche.getMatricula();
 		}if (nombreColumn.equals("Año")) {
 			return coche.getAño();
-		}return coche.getDisponible();
+		}if (nombreColumn.equals("Disponible")) {
+			if (coche.getDisponible()) {
+				return "Sí";
+			}else {
+				return "No";
+			}
+		}
+		return null;
 	}
 
 }

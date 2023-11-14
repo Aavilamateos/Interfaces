@@ -56,7 +56,7 @@ public class ExamenService{
 	// Ignorar este código...
 	private static Map<Boolean, List<Coche>> bbdd = new HashMap<Boolean, List<Coche>>();
 	private static String[] a = new String[] {"Seat", "Toyota", "Renault"};
-	private static List<String> marcas = Arrays.asList(a);
+	private static List<String> marcas = new ArrayList(Arrays.asList(a));
 	static {
 		List<Coche> cochesNoDisponibles = new ArrayList<Coche>();
 		cochesNoDisponibles.add(new Coche("Seat", "Córdoba", "2005", "2521RFD", false));
