@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.bienvenidaController.BienvenidaController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="componentMenu" mnemonicParsing="false" text="Componentes">
+            <items>
+              <MenuItem fx:id="comboItem" mnemonicParsing="false" onAction="#loadCombo" text="ComboBox" />
+                  <MenuItem fx:id="dateItem" mnemonicParsing="false" onAction="#loadDate" text="DatePicker" />
+                  <MenuItem fx:id="colorItem" mnemonicParsing="false" onAction="#loadColor" text="ColorPicker" />
+                  <MenuItem fx:id="sliderItem" mnemonicParsing="false" onAction="#loadSlider" text="Slider" />
+            </items>
+          </Menu>
+          <Menu fx:id="appMenu" mnemonicParsing="false" text="App">
+            <items>
+              <MenuItem fx:id="logoutItem" mnemonicParsing="false" onAction="#logOut" text="Cerrar sesión" />
+                  <MenuItem fx:id="exitItem" mnemonicParsing="false" onAction="#exit" text="Salir" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="bienvenidaLbl" layoutX="225.0" layoutY="99.0" prefHeight="60.0" prefWidth="173.0">
+               <font>
+                  <Font name="Dubai Regular" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

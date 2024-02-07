@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: #12a14b;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceu.dam.javafx.practica1.controller.LoginController">
+   <children>
+      <PasswordField fx:id="passF" layoutX="353.0" layoutY="149.0" promptText="Password" />
+      <Button id="ACCEPT" defaultButton="true" layoutX="355.0" layoutY="212.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: lightblue;" text="Entrar">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <Button id="EXIT" fx:id="botonSalir" cancelButton="true" layoutX="441.0" layoutY="212.0" mnemonicParsing="false" onAction="#exit" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: lightblue;" text="Salir">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <TextField fx:id="userTF" layoutX="353.0" layoutY="117.0" promptText="Username" />
+      <Label fx:id="accessLbl" alignment="CENTER" layoutX="292.0" layoutY="294.0" prefHeight="35.0" prefWidth="266.0" textAlignment="CENTER" />
+      <Label fx:id="userLbl" alignment="CENTER" layoutX="292.0" layoutY="372.0" prefHeight="35.0" prefWidth="266.0" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="titleLbl" alignment="CENTER" layoutX="295.0" layoutY="22.0" prefHeight="120.0" prefWidth="266.0" text="DATECR💖FT">
+         <font>
+            <Font name="Bernard MT Condensed" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

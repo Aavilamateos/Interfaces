@@ -1,0 +1,29 @@
+.root{
+	-fx-background-image: url("creeper.png");
+	-fx-background-repeat: stretch;
+	-fx-background-size:850,700;
+	-fx-background-position:center center;
+	-fx-effect: dropshadow(three-pass-box,black,30,0.5,0.0);
+}
+.textfield{
+	-fx-padding-top:10%;
+	-fx-padding-right:5%;
+}
+.button{
+	-fx-padding-top:10%;
+}
+.label{
+	-fx-padding-top:20%;
+}
+#ACCEPT:hover{
+	-fx-text-fill:green;
+}
+#EXIT:hover{
+	-fx-text-fill:red;
+}
+#USUARIOINCORRECTO{
+	-fx-text-fill:red;
+}
+#USUARIOCORRECTO{
+	-fx-text-fill:lightblue;
+}

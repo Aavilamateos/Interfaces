@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="856.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.login.LoginController">
+   <children>
+      <Button layoutX="402.0" layoutY="383.0" mnemonicParsing="false" onAction="#escribirTexto" text="Aceptar" />
+      <TextField fx:id="nameTF" layoutX="354.0" layoutY="228.0" promptText="Indica tu nombre" styleClass="camposCelestes" />
+   </children>
+</AnchorPane>
