@@ -1,0 +1,116 @@
+.borderPane{
+	-fx-background-color: #373737;
+	-fx-border-color: #c0b283;
+	-fx-pref-width: 900;
+	-fx-pref-height: 625;
+	
+}
+.anchorPane{
+	-fx-background-color: #373737;
+	-fx-border-color: #c0b283;
+	-fx-pref-width: 900;
+	-fx-pref-height: 600;
+	
+}
+.gLabel{
+	-fx-font-family: "Felix Titling", regular;
+	-fx-font-size: 32px;
+	-fx-text-fill: #c0b283;
+	-fx-text-alignment:center;
+	-fx-pref-width: 250;
+	-fx-pref-height: 80;
+}
+.tagLabel{
+	-fx-font-family: "Tungsten Bold", regular;
+	-fx-font-size: 24px;
+	-fx-text-fill: #c0b283;
+	-fx-text-alignment:center;
+	-fx-pref-width: 250;
+	-fx-pref-height: 80;
+}
+.equipoLabel{
+	-fx-font-family: "Tungsten Bold", regular;
+	-fx-font-size: 48px;
+	-fx-text-alignment:center;
+	-fx-pref-width: 250;
+	-fx-pref-height: 80;
+}
+.gLabelSmall{
+	-fx-font-family: "Felix Titling", regular;
+	-fx-font-size: 10px;
+	-fx-text-fill: #c0b283;
+	-fx-text-alignment:center;
+
+}
+.gLabelTitulo{
+	-fx-font-family: "Tungsten Bold", regular;
+	-fx-font-size: 48px;
+	-fx-text-fill: #c0b283;
+	-fx-text-alignment:center;
+	-fx-pref-width: 250;
+	-fx-pref-height: 80;
+}
+
+
+
+
+.gButton{
+	-fx-text-fill: #373737;
+	-fx-background-color:  #c0b283;
+	-fx-border-radius: 10;
+	-fx-background-radius: 10;
+	-fx-background-insets: 0,1,2,3,0;
+	
+}
+.gButton:hover {
+	-fx-text-fill: #373737;
+	-fx-background-color: #a29360;
+}
+.rButton{
+	-fx-text-fill: #373737;
+	-fx-background-color:  #C31808;
+	-fx-border-radius: 10;
+	-fx-background-radius: 10;
+	-fx-background-insets: 0,1,2,3,0;
+}
+.rButton:hover{
+	-fx-text-fill: #373737;
+	-fx-background-color:  #fafbfd;
+	-fx-border-radius: 10;
+	-fx-background-radius: 10;
+	-fx-background-insets: 0,1,2,3,0;
+}
+.otherButton{
+	-fx-text-fill: #c0b283;
+	-fx-background-color:  #373737;
+	-fx-border-color: #c0b283;
+	-fx-border-radius: 10;
+	-fx-background-radius: 10;
+}
+.otherButton:hover{
+	-fx-text-fill: #c0b283;
+	-fx-background-color:  #1e1e1e;
+	-fx-border-color: #c0b283;
+}
+.menuBar{
+	-fx-text-fill: #373737;
+	-fx-background-color: #c0b283;
+	
+}
+.menu{
+	-fx-text-fill: #373737;
+	-fx-background-color: #c0b283;
+}
+.menu:hover{
+	-fx-text-fill: #373737;
+	-fx-background-color: #a29360;
+}
+.menu-item{
+	-fx-text-fill: #373737;
+	-fx-background-color: #c0b283;
+	-fx-border-color: #c0b283;
+}
+.menu-item:hover{
+	-fx-text-fill: #373737;
+	-fx-background-color: #a29360;
+}

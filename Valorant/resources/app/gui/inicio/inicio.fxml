@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="700.0" styleClass="borderPane" stylesheets="@../../css/coacheer.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.inicio.InicioController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="anchorPane" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="userLbl" alignment="CENTER" layoutX="111.0" layoutY="51.0" styleClass="gLabelTitulo" />
+            <Label fx:id="equipoLbl" alignment="CENTER" layoutX="111.0" layoutY="202.0" styleClass="equipoLabel" />
+            <Label layoutX="142.0" layoutY="153.0" styleClass="gLabelSmall" text="Pertenece a:" />
+            <ImageView fx:id="imageEquipo" fitHeight="178.0" fitWidth="225.0" layoutX="585.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="equipoTagLbl" alignment="CENTER" layoutX="111.0" layoutY="331.0" styleClass="tagLabel" />
+            <Label fx:id="jugadorTagLbl" alignment="CENTER" layoutX="354.0" layoutY="51.0" prefWidth="220.0" styleClass="tagLabel" />
+            <Button layoutX="794.0" layoutY="14.0" mnemonicParsing="false" onAction="#borrarPerfil" styleClass="rButton" text="Borrar perfil" />
+         </children></AnchorPane>
+   </center>
+   <top>
+      <MenuBar styleClass="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Perfil">
+            <items>
+              <MenuItem fx:id="editarPerfil" mnemonicParsing="false" onAction="#loadPerfil" text="Editar" />
+                  <MenuItem fx:id="inicioItem" mnemonicParsing="false" onAction="#loadInicio" text="Inicio" visible="false" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Equipo">
+               <items>
+                  <MenuItem fx:id="crearItem" mnemonicParsing="false" onAction="#loadCrear" text="Crear" />
+                  <MenuItem fx:id="editarEquipoItem" mnemonicParsing="false" onAction="#loadEquipo" text="Editar" />
+                  <MenuItem fx:id="buscarItem" mnemonicParsing="false" onAction="#loadBuscar" text="Buscar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Opciones">
+               <items>
+                  <MenuItem fx:id="cerrarSesionItem" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                  <MenuItem fx:id="exitItem" mnemonicParsing="false" onAction="#exit" text="Salir" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="anchorPane" stylesheets="@../../css/coacheer.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.crearEquipo.CrearEquipoController">
+   <children>
+      <ImageView fx:id="imageEquipo" fitHeight="212.0" fitWidth="301.0" layoutX="300.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="nombreEquipoTf" layoutX="366.0" layoutY="248.0" prefHeight="25.0" prefWidth="170.0" promptText="Nombre del equipo" />
+      <TextField fx:id="tagEquipoTf" layoutX="365.0" layoutY="300.0" prefHeight="25.0" prefWidth="170.0" promptText="Tag del equipo" />
+      <Label fx:id="equipoLbl" layoutX="497.0" layoutY="138.0" prefHeight="123.0" prefWidth="301.0" styleClass="gLabelTitulo" stylesheets="@../../css/coacheer.css" />
+      <Button layoutX="375.0" layoutY="364.0" mnemonicParsing="false" onAction="#crearEquipo" prefHeight="25.0" prefWidth="153.0" styleClass="gButton" text="Añadir imagen y crear" />
+   </children>
+</AnchorPane>
